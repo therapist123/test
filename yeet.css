@@ -1,9 +1,10 @@
 h1 {
  text-align: center;
- font-family: sans-serif;
+ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
  background-color: #F08080;
 }
 
 body {
  background-color: #FA8072;
+ font-family: Tahoma, Geneva, sans-serif
 }
