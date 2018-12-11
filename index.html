@@ -7,15 +7,14 @@
 
 <h1>PROJECT YEET</h1>
 <button onclick="collectsticks()">Collect Sticks</button>
+<button onclick="checkmats()">Material Inventory</button>
 <script>
-var sticks = 0;
-var x = 1;
-while (x = 1) {
-  document.getElementById("demo").innerHTML = sticks;
-  <p id="demo"></p>
-}
+var wood = 0;
 function collectsticks() {
-  sticks=sticks+1;
+  wood=wood+1;
+}
+function checkmats() {
+  alert(”Materials Available: \n ” + ”Wood:” + wood);
 }
 </script>
 
