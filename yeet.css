@@ -6,14 +6,3 @@ h1 {
 body {
  background-color: #FA8072;
 }
-
-button {
-  background-color: #76ff76;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
