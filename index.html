@@ -33,7 +33,6 @@ Github. Project. Very basic HTML/JS programming. (For a list of crafting recipes
 var wood = 0;
 var stone = 0;
 var hatchet = 0;
-var craftrecipe = 0;
 function collectsticks() {
  wood=wood+1;
 }
@@ -47,13 +46,13 @@ function checkstone() {
  window.alert(stone);
 }
 function opencrafting() {
- craftrecipe = window.prompt(”Enter recipe ID:”, ”ID HERE”);
+  var craftrecipe = window.prompt(”Enter recipe ID:”, ”ID HERE”);
   
- if (craftrecipe == 1) {
-   if (wood >= 15 && stone >= 20) {
-     wood-15;
-     stone-20;
-     hatchet=1;
+  if (craftrecipe == 1) {
+    if (wood >= 15 && stone >= 20) {
+      wood-15;
+      stone-20;
+      hatchet=1;
    }
    
  }
