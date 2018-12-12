@@ -32,6 +32,7 @@ Github. Project. Very basic HTML/JS programming. (For a list of crafting recipes
 <script>
 var wood = 0;
 var stone = 0;
+var hatchet = 0;
 function collectsticks() {
  wood=wood+1;
 }
@@ -45,7 +46,15 @@ function checkstone() {
  window.alert(stone);
 }
 function opencrafting() {
-  window.prompt("Select Crafting #ID:","Enter #ID here");
+  var craftid window.prompt("Select Crafting #ID:","Enter #ID here");
+  if (craftid == 1) {
+    if (wood == 15 && stone == 10) {
+      window.alert("Crafting successful!");
+      stonehatchet = 1;
+    } else {
+      
+    }
+  txt = "User cancelled the prompt.";
 }
 </script>
 </body>
