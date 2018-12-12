@@ -46,7 +46,7 @@ function checkstone() {
  window.alert(stone);
 }
 function opencrafting() {
-  window.prompt(”Enter recipe ID:”, ”ID HERE”);
+  var craftrecipe = prompt(”Enter recipe ID:”, ”ID HERE”);
   
   if (craftrecipe == 1) {
     if (wood >= 15 && stone >= 20) {
