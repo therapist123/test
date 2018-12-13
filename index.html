@@ -23,18 +23,28 @@
 Project Yeet is a small survival clicker game that will (probably, most likely) never be finished.
 PROJECT YEET will soon be renamed to... Actually, I dont know what I'll name it too. But, yeah. Clicker.
 Github. Project. Very basic HTML/JS programming. (howtoplay in readme)</p1>
-<p2> </p2>
-<button class onclick="collectsticks()">Collect Sticks</button>
-<button onclick="checkwood()">Wood Inventory</button>
-<button onclick="collectpebbles()">Collect Small Rocks</button>
-<button onclick="checkstone()">Stone Inventory</button>
-<button onclick="crafthatchet()">Craft Hatchet (15 Wood)</button>
+<p2>
+Story: You wake up in the thick depths of a strange forest. You notice the forest seems to
+be untouched by civilization- no visual signs of any wildlife but you hear near-inaudible stepping.
+You remember nothing except how to create basic tools and to hunt small animals.
+</p2>
+<button class="button" onclick="collectsticks()">Collect Wood</button>
+<button class="button" onclick="checkwood()">Wood Inventory</button>
+<button class="button" onclick="collectpebbles()">Collect Small Rocks</button>
+<button class="button" onclick="checkstone()">Stone Inventory</button>
+<button class="button" onclick="crafthatchet()">Craft Hatchet (15 Wood)</button>
+<button class="button" onclick="craftbench()">Craft Workbench 1(75 Wood,10 Stone)</button>
 <script>
 var wood = 0;
 var stone = 0;
 var hatchet = 0;
+var workbench = 0;
 function collectsticks() {
- wood=wood+1;
+ if (hatchet >= 1) {
+   wood=wood+3;
+ } else {
+   wood=wood+1;  
+ }
 }
 function collectpebbles() {
  stone=stone+1;
