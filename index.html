@@ -22,13 +22,13 @@
 <p1>
 Project Yeet is a small survival clicker game that will (probably, most likely) never be finished.
 PROJECT YEET will soon be renamed to... Actually, I dont know what I'll name it too. But, yeah. Clicker.
-Github. Project. Very basic HTML/JS programming. (For a list of crafting recipes, please see recipes.txt)</p1>
+Github. Project. Very basic HTML/JS programming. (howtoplay in readme)</p1>
 <p2> </p2>
 <button class onclick="collectsticks()">Collect Sticks</button>
 <button onclick="checkwood()">Wood Inventory</button>
 <button onclick="collectpebbles()">Collect Small Rocks</button>
 <button onclick="checkstone()">Stone Inventory</button>
-<button onclick="opencrafting()">Crafting</button>
+<button onclick="crafthatchet()">Craft Hatchet (15 Wood)</button>
 <script>
 var wood = 0;
 var stone = 0;
@@ -45,18 +45,12 @@ function checkwood() {
 function checkstone() {
  window.alert(stone);
 }
-function opencrafting() {
-  var craftrecipe = prompt(”Enter recipe ID:”, ”ID HERE”);
-  
-  if (craftrecipe == 1) {
-    if (wood >= 15 && stone >= 20) {
-      wood-15;
-      stone-20;
-      hatchet=1;
-   }
-   
- }
-  
+function crafthatchet() {
+  if (wood >= 15) {
+    wood-15;
+    hatchet++
+    window.alert("Hatchet crafted.");
+  }
 }
 </script>
 </body>
