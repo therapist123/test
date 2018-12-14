@@ -42,7 +42,7 @@ var hatchet = 0;
 var workbench = 0;
 function collectsticks() {
  if (hatchet >= 1) {
-   wood=wood+9;
+   wood=wood*hatchet
  } else {
    wood=wood+3;  
  }
@@ -58,11 +58,11 @@ function checkstone() {
 }
 function craftbench1() {
   if (wood >= 180) {
-     if (workbench = 0) { 
+     if (workbench != 1) { 
         if (stone >= 20) {
            wood=wood-180;
            stone=stone-20;
-           workbench=1;
+           workbench=workbench+1
            window.alert("Workbench crafted.");
           }
       }
