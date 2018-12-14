@@ -40,6 +40,12 @@ var wood = 0;
 var stone = 0;
 var hatchet = 0;
 var workbench = 0;
+var sword = 0;
+var furnace = 0;
+var metal = 0;
+var refinemetal = 0;
+var workbench2 = 0;
+var pickaxe = 0;
 function collectsticks() {
  if (hatchet >= 1) {
    wood=wood+6;
@@ -55,6 +61,11 @@ function checkwood() {
 }
 function checkstone() {
  window.alert(stone);
+}
+function collectmetal() {
+  if (pickaxe = 1;) {
+    metal=metal+1
+  }
 }
 function craftbench1() {
   if (wood >= 180) {
@@ -84,6 +95,14 @@ function usebench1() {
         metal=metal-20;
         sword=1;
         window.alert("Sword crafted in WB1");
+        }
+    if (itemwb1 = 2) {
+      if (wood = 30) {
+        if (stone = 15) {
+          wood=wood-30;
+          stone=stone-15;
+          pickaxe++
+        }
       }
     }
   }
