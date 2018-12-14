@@ -32,7 +32,7 @@ You remember nothing except how to create basic tools and to hunt small animals.
 <button class="button" onclick="checkwood()">Wood Inventory</button>
 <button class="button" onclick="collectpebbles()">Collect Small Rocks</button>
 <button class="button" onclick="checkstone()">Stone Inventory</button>
-<button class="button" onclick="crafthatchet()">Craft Hatchet (15 Wood)</button>
+<button class="button" onclick="crafthatchet()">Craft Hatchet (20 Wood)</button>
 <button class="button" onclick="craftbench1()">Craft Workbench One (60 Wood,10 Stone)</button>
 <button class="button" onclick="usebench1()">Use WB1</button>
 <script>
@@ -66,6 +66,14 @@ function craftbench1() {
       }
    }
 }
+function crafthatchet() {
+  if (wood >= 20) {
+      wood=wood-20;
+      hatchet++;
+      window.alert("Hatchet crafted.");
+   }
+}
+
 </script>
 </body>
 </html>
