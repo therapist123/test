@@ -33,8 +33,7 @@ You remember nothing except how to create basic tools and to hunt small animals.
 <button class="button" onclick="collectpebbles()">Collect Small Rocks</button>
 <button class="button" onclick="checkstone()">Stone Inventory</button>
 <button class="button" onclick="crafthatchet()">Craft Hatchet (20 Wood)</button>
-<button class="button" onclick="craftbench1()">Craft Workbench One (180 Wood,20 Stone)</button>
-<button class="button" onclick="usebench1()">Use WB1</button>
+<button class="button" onclick="craftbench1()">Craft Pickaxe (50 Wood,20 Stone)</button>
 <script>
 var wood = 0;
 var stone = 0;
@@ -54,7 +53,10 @@ function collectsticks() {
  }
 }
 function collectpebbles() {
- stone=stone+1;
+ if (pickaxe >= 1) {
+   stone=stone=3;
+ } else {
+  stone=stone+1;
 }
 function checkwood() {
  window.alert(wood);
@@ -67,15 +69,13 @@ function collectmetal() {
     metal=metal+1
   }
 }
-function craftbench1() {
-  if (wood >= 180) {
-     if (workbench != 1) { 
-        if (stone >= 20)  {
-           wood=wood-180;
-           stone=stone-20;
-           workbench=workbench+1;
-           window.alert("Workbench crafted.");
-          }
+function craftpickaxe() {
+  if (wood >= 50) {
+      if (stone >= 20)  {
+         wood=wood-50;
+         stone=stone-20;
+         pickaxe++;
+         window.alert("Pickaxe crafted.");
       }
    }
 }
@@ -85,29 +85,6 @@ function crafthatchet() {
       hatchet++;
       window.alert("Hatchet crafted.");
    }
-}
-function usebench1() {
-  if (workbench = 1) {
-    var itemwb1 = prompt("Enter Item ID:", "IID here, its in ids.txt");
-    
-    if (itemwb1 = 1) {
-      if (metal >= 20) {
-        metal=metal-20;
-        sword=1;
-        window.alert("Sword crafted in WB1");
-        }
-      } 
-    if (itemwb1 = 2) {
-      if (wood >= 30) {
-        if (stone >= 15) {
-          wood=wood-30;
-          stone=stone-15;
-          pickaxe++;
-        }
-      }
-    } else {
-      window.alert("No workbench.");
-  }
 }
 </script>
 </body>
